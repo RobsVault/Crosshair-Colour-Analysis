@@ -1,2 +1,10 @@
 # Crosshair-Colour-Analysis
-Repository containing scripts to collect and analysis colour data from CS2 gameplay and calculate how different crosshair colours perform against this colour data.
+This repository contains scripts to collect and analyse colour data from CS2 gameplay and then calculate how different crosshair colours perform against this colour data.
+
+**1_Video_Clustering_Analysis**: This analyses CS2 video files (per map) that have been properly prepared by first collecting colour data from pixels within a selected area, then performing clustering analysis on this colour data to identify the most prominent colours within the videos. Contrast calculations are then performed between the identified cluster colours of each map and the pre-determined crosshair colour list (this was pre-determined by scraping professional data - refer to procrosshair data in the data folder). This creates two files, the first is 'perceptual_results' which provides colour math calculations from each crosshair colour against each cluster colour. The second is 'summary_results' which presents the clustering results when selecting the optimal cluster number and the results with the final cluster number chosen. This was designed to produce separate results for different maps.
+
+**2_Creating_Crosshair_Summary_Files**: This script is designed to calculate composite scores for each map and all pre-determined crosshair colours. This produces a file called "*_crosshair_perceptual_contrast_composites".
+
+**3_Merging_Similar_Crosshairs**: This script is designed to determine which crosshair colours can be merged together for more simplistic representation, as colours can differ by a singular value in the 'Red', 'Green' or 'Blue' attribute but does not mean these colours are perceptually different. Hence merging similar colours provides a benefit of simplifying results. This produces a file called "colour_clusters_threshold_8"
+
+**4_Map_Merged_Crosshair_Summary**: This script is designed to produce a simplified results file which uses the data from "*_crosshair_perceptual_contrast_composites" and the merged crosshair colours from "colour_clusters_threshold_8" to produce simplified results for each map. Additionally, this script produces an overall average score across all maps, this file is called "MASTER_merged_crosshair_summary".
