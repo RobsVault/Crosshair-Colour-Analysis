@@ -24,7 +24,7 @@ The resulting files are named:
 
 `*_crosshair_perceptual_summary_with_composites.csv`
 
-### 3. Merging Similar Crosshair Colours — `3_Merging_Similar_Crosshairs`
+### 3. Merging Similar Crosshair Colours — `3_Merging_Similar_Crosshair_Colours`
 This stage identifies crosshair colours that are sufficiently similar to be represented as a single colour group.
 
 Although two RGB colours may differ by one or more values in their red, green, or blue components, this does not necessarily mean that they are perceptually distinguishable. CIEDE2000 colour difference in CIELAB space is therefore used to group perceptually similar crosshair colours.
